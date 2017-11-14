@@ -23,7 +23,7 @@ public class ProductServiceTest{
     
     @Test
     public void testBuySufficient() {
-    	    //Set behavior , handle dependency
+        //Set behavior , handle dependency
         when(productDao.getAvailableProducts(product)).thenReturn(30);
         
         //Call logic

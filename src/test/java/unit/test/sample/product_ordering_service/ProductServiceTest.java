@@ -13,20 +13,29 @@ public class ProductServiceTest{
     @Before
     public void setupMock() {
     	    productService = new ProductService();
+    	    
+    	    //Construct
         product = mock(Product.class);
+        //Construct
         productDao = mock(ProductDao.class);
         productService.setProductDao(productDao);
     }
     
     @Test
     public void testBuySufficient() {
+    	    //Set behavior , handle dependency
         when(productDao.getAvailableProducts(product)).thenReturn(30);
         
+        //Call logic
         productService.buy(product, 5);
+        
+        //Verify behavior
         verify(productDao).orderProduct(product, 5);
+        
+        //Assert correctness
     }
     
-    // @Test
+    //@Test
     //public void testBuyInsufficient() {
     //    when(productDao.getAvailableProducts(product)).thenReturn(30);
     //    

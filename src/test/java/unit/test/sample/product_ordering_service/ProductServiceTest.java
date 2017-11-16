@@ -35,11 +35,13 @@ public class ProductServiceTest{
         //Assert correctness
     }
     
-    //@Test
-    //public void testBuyInsufficient() {
-    //    when(productDao.getAvailableProducts(product)).thenReturn(30);
-    //    
-    //    productService.buy(product, 5);
-    //    verify(productDao).orderProduct(product, 5);
-    //}
+    /*
+    @Test
+    public void testBuyInsufficient() {
+        when(productDao.getAvailableProducts(product)).thenReturn(30);
+        
+        productService.buy(product, 5);
+        verify(productDao).orderProduct(product, 5);
+    }
+    */
 }

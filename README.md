@@ -23,7 +23,7 @@ $git clone https://github.com/masonwu1762/product-ordering-service.git
 
 在Eclipse的File 功能列中選擇[Import],
 
-在Select畫面中選[Exsiting Mvaven Projects],
+在Select畫面中選[Exsiting Maven Projects],
 
 在root directory目錄中選擇剛剛clone下來的專案目錄，應該是 Users/wumason/eclipse-workspace/product-ordering-service
 

@@ -9,13 +9,15 @@ public class ProductService {
 	
 	public boolean buy(Product product, int orderedQuantity) {
 		boolean transactionStatus=false;
+		
+		//取得庫存量
 		int availableQuantity = productDao.getAvailableProducts(product);
 		
-		if (orderedQuantity > availableQuantity) {
+		if (orderedQuantity > availableQuantity) {  //購買量大於庫存量
 			productDao.orderProduct(product, 0);
 			transactionStatus = false;
 		}
-		else {
+		else {  //購買量小於庫存量
 		    productDao.orderProduct(product, orderedQuantity);
 		    transactionStatus=true;
 		}
